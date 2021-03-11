@@ -19,8 +19,7 @@ namespace ServiceLayer.BookServices.Concrete
             _context = context;
         }
 
-        public IQueryable<BookListDto> SortFilterPage
-            (SortFilterPageOptions options)
+        public IQueryable<BookListDto> SortFilterPage(SortFilterPageOptions options)
         {
             var booksQuery = _context.Books            //#A
                 .AsNoTracking()                        //#B

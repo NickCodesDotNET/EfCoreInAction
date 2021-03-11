@@ -15,6 +15,7 @@ namespace EfCoreInAction.Controllers
         public HomeController(EfCoreContext context)   //#A
         {                                              //#A
             _context = context;                        //#A
+            _context.Books.Where(b => b.Title.StartsWith("QUsdfgsd").
         }                                              //#A
 
         public IActionResult Index                     //#B

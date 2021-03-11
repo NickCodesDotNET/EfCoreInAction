@@ -44,7 +44,8 @@ namespace EfCoreInAction
                 //if running in development mode then we alter the connection to have the branch name in it
                 connection = connection.FormDatabaseConnection(gitBranchName);
             }
-            services.AddDbContext<EfCoreContext>(options => options.UseSqlServer(connection,
+            services.AddDbContext<EfCoreContext>(options => 
+                options.UseSqlServer(connection,
                 b => b.MigrationsAssembly("DataLayer")));
         }
 
